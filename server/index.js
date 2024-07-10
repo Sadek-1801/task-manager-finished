@@ -8,7 +8,8 @@ const app = express();
 require("dotenv").config();
 
 const corsOptions = {
-  origin: ["http://localhost:5174", "http://localhost:5173"],
+  origin: ["http://localhost:5174", "http://localhost:5173", 
+    "https://task-manager-finished.netlify.app"],
   credentials: true,
   optionSuccessStatus: 200,
 };
