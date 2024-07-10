@@ -1,7 +1,7 @@
 
 # Task Management System
 
-- ** (Live Site)[https://task-manager-finished.netlify.app/]
+    - ** (Live Site)[https://task-manager-finished.netlify.app/]
 
 ## Table of Contents
 
