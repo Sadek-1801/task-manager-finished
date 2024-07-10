@@ -8,8 +8,11 @@ const app = express();
 require("dotenv").config();
 
 const corsOptions = {
-  origin: ["http://localhost:5174", "http://localhost:5173", 
-    "https://task-manager-finished.netlify.app"],
+  origin: [
+    "http://localhost:5174",
+    "http://localhost:5173",
+    "https://task-manager-finished.netlify.app",
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 };
@@ -35,7 +38,6 @@ const verifyToken = async (req, res, next) => {
 };
 // verify admin
 
-
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qv5d3vd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -58,7 +60,7 @@ async function run() {
       const result = await userCollection.findOne(query);
       if (!result || result?.role !== "admin")
         return res.status(401).send({ message: "unauthorized access!!" });
-    
+
       next();
     };
 
@@ -161,7 +163,6 @@ async function run() {
       res.send(result);
     });
 
-
     app.get("/user/:email", verifyToken, async (req, res) => {
       const email = req.params.email;
       const query = { email: email };
@@ -189,7 +190,7 @@ async function run() {
       }
     });
     // save user api
-    app.put("/user",  async (req, res) => {
+    app.put("/user", async (req, res) => {
       const user = req.body;
       const query = { email: user?.email };
       const isExist = await userCollection.findOne(query);

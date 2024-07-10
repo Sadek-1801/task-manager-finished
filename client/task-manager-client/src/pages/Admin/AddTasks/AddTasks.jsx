@@ -74,7 +74,7 @@ const AddTasks = () => {
                             type="text"
                             name="title"
                             required
-                            value={formData?.title}
+                            value={formData.title}
                             onChange={handleChange}
                             placeholder="e.g., Task Title"
                             className="w-full p-2 border border-blue-600 rounded"
@@ -83,7 +83,7 @@ const AddTasks = () => {
                     <div className="mb-4">
                         <label className="block">Assign To</label>
                         <div className="flex flex-wrap">
-                            <ul>{users?.map((user, idx) => (
+                            <ul>{users.map((user, idx) => (
                                 <li key={idx}><label className="block mr-4">
                                     <input
                                         type="checkbox"
@@ -103,7 +103,7 @@ const AddTasks = () => {
                         <label className="block">Task Description</label>
                         <textarea
                             name="tasks"
-                            value={formData?.tasks}
+                            value={formData.tasks}
                             required
                             onChange={handleChange}
                             rows="4"
@@ -113,7 +113,7 @@ const AddTasks = () => {
                     <div className="mb-4">
                         <label className="block">Deadline</label>
                         <DatePicker
-                            selected={formData?.deadline}
+                            selected={formData.deadline}
                             onChange={handleDateChange}
                             className="w-full p-2 border border-blue-600 rounded"
                         />

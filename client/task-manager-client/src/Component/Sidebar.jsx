@@ -1,4 +1,6 @@
-import { FaTachometerAlt, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaTachometerAlt, FaUser, FaTasks, FaClipboardCheck } from 'react-icons/fa';
+import { IoPeopleSharp } from "react-icons/io5";
+import { MdOutlineManageSearch, MdTaskAlt } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import useRole from '../Hooks/useRole';
 
@@ -16,7 +18,7 @@ const Sidebar = () => {
 						`flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer hover:bg-blue-600 hover:text-white ${isActive ? 'bg-blue-600 text-white' : ''}`
 					}
 				>
-					<FaTachometerAlt />
+					<IoPeopleSharp />
 					<span className='hidden md:inline'>Profile</span>
 				</NavLink>
 				{role === "admin" && <NavLink
@@ -25,7 +27,7 @@ const Sidebar = () => {
 						`flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer hover:bg-blue-600 hover:text-white ${isActive ? 'bg-blue-600 text-white' : ''}`
 					}
 				>
-					<FaTachometerAlt />
+					<FaTasks />
 					<span className='hidden md:inline'>Add Tasks</span>
 				</NavLink>}
 				{role === "admin" && <NavLink
@@ -34,7 +36,7 @@ const Sidebar = () => {
 						`flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer hover:bg-blue-600 hover:text-white ${isActive ? 'bg-blue-600 text-white' : ''}`
 					}
 				>
-					<FaTachometerAlt />
+					<MdOutlineManageSearch/>
 					<span className='hidden md:inline'>Manage Tasks</span>
 				</NavLink>}
 				{role === "user" && <NavLink
@@ -43,7 +45,7 @@ const Sidebar = () => {
 						`flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer hover:bg-blue-600 hover:text-white ${isActive ? 'bg-blue-600 text-white' : ''}`
 					}
 				>
-					<FaTachometerAlt />
+					<MdTaskAlt />
 					<span className='hidden md:inline'>My Tasks</span>
 				</NavLink>}
 				<NavLink
@@ -52,7 +54,7 @@ const Sidebar = () => {
 						`flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer  hover:text-white hover:bg-blue-600 ${isActive ? 'bg-blue-600 text-white' : ''}`
 					}
 				>
-					<FaShoppingCart />
+					<FaClipboardCheck />
 					<span className="hidden md:inline ">Board</span>
 				</NavLink>
 				{ role === "admin" && <NavLink
