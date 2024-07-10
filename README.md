@@ -1,7 +1,7 @@
 
 # Task Management System
 
-    - ** (Live Site)[https://task-manager-finished.netlify.app/]
+- ## [Live Site](https://task-manager-finished.netlify.app/)
 
 ## Table of Contents
 
@@ -186,3 +186,11 @@ If you'd like to contribute to this project, please fork the repository and use 
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
+Sure! Here's the updated README file with the live site URL highlighted:
+
+---
+
+
+
+
+
