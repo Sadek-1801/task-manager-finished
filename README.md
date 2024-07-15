@@ -2,6 +2,7 @@
 # Task Management System
 
 - ## [Live Site](https://task-manager-finished.netlify.app/)
+- ## Admin Credentials: email: admin@admin.com, password: 123456 
 
 ## Table of Contents
 
@@ -23,7 +24,7 @@
 
 ## Overview
 
-Task Manager is a full-stack web application designed to manage tasks efficiently. It includes an authentication system with two user roles (Admin and User), a task management board, and functionalities for assigning, viewing, and updating tasks.
+Task Manager is a full-stack web application designed to manage tasks efficiently. It includes an authentication system with two user roles (Admin and User), a task management board, and functionalities for assigning, viewing, and updating tasks. (This was a challenge project and I have completed this one within 30 hours). Play with the admin and user. Best of Luck. 
 
 ## Key Features
 
